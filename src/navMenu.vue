@@ -1,10 +1,10 @@
 <template>
-  <div class="div">
+  <div class="nav-bar-right">
     <el-menu
       :default-active="activeIndex2"
       class="el-menu-demo"
       mode="horizontal"
-      background-color="#545c64"
+      background-color="#005BAC"
       text-color="#fff"
       active-text-color="#ffd04b"
       @select="handleSelect"
@@ -21,6 +21,16 @@
     </el-menu>
   </div>
 </template>
+
+<style>
+
+div.nav-bar-right{
+  float: right;
+  height: 70px;
+  width: 390px;
+}
+</style>
+
 
 
 <script>

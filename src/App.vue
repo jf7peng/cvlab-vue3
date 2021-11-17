@@ -1,24 +1,32 @@
 <template>
   <div class="frame">
-    <div>
-      <img class="main-logo" src="./assets/cvlab.png" />
-      <div class="div-right-align">
+    <div class="height130">
+      <span class="span-main-logo">
+        <img class="main-logo" src="./assets/cvlab-white.png" />
+      </span>
+      <span class="span-right-align">
         <div class="bjtudiv">
-          <img class="right-align" src="./assets/logo1.png" />
+          <img class="right-align" src="./assets/logo1-white.png" />
         </div>
-        <div class="nav-bar-right">
+        <div class="height70">
           <navMenu />
         </div>
-      </div>
+      </span>
     </div>
-    <el-carousel indicator-position="outside" class="center">
-      <el-carousel-item v-for="item in images" :key="item.id">
-        <img :src="item.url" alt="无图片" />
-      </el-carousel-item>
-    </el-carousel>
+    <div class="blank20"></div>
+    <div>
+      <span class="banner">
+        <el-carousel height="480px" indicator-position="inside" class="center">
+          <el-carousel-item v-for="item in images" :key="item.id">
+            <img class="bannerImg" :src="item.url" alt="无图片" />
+          </el-carousel-item>
+        </el-carousel>
+      </span>
+      <span> "你好" </span>
+    </div>
+
     <navMenu />
   </div>
-  
 </template>
 
 <script>
@@ -68,6 +76,10 @@ export default {
   margin: 0;
 }
 
+img.bannerImg {
+  height: 480px;
+}
+
 .el-carousel__item img {
   position: absolute;
   top: 50%;
@@ -83,26 +95,41 @@ export default {
   background-color: #d3dce6;
 }
 
+.height500 {
+  height: 500px;
+}
+
 div.frame {
   background-color: rgb(252, 253, 253);
-  padding-top: 5px;
   padding-right: calc(50% - 672px);
   padding-bottom: 20px;
   padding-left: calc(50% - 672px);
 }
 
-div.div-right-align {
+div.blank20 {
+  height: 20px;
+  background-color: #005bac;
+}
+
+span.span-right-align {
   float: right;
-  height: 120px;
-  width: 500px;
+  margin-top: 5px;
+  margin-right: 10px;
+  height: 130px;
+  width: 1000px;
 }
 
 div.bjtudiv {
   height: 60px;
 }
 
-.nav-bar-right {
-  float: right;
+div.height130 {
+  height: 130px;
+  background-color: #005bac;
+}
+
+div.height70 {
+  height: 70px;
 }
 
 img.right-align {
@@ -111,7 +138,20 @@ img.right-align {
 }
 
 img.main-logo {
+  padding: 10px, 10px, 10px, 10px;
   height: 130px;
+  float: left;
+}
+
+span.span-main-logo {
+  float: left;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+span.banner {
+  height: 480px;
+  width: 270px;
 }
 
 h1,

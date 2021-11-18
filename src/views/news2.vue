@@ -98,7 +98,7 @@ div.first_02 {
   width: 800px;
   margin-top: 0px;
   margin-left: 0px;
-  padding: 0px;
+  padding: 0px 5px 0px 5px;
   height: 450px;
   border-bottom: medium solid #ccc;
 }

@@ -98,8 +98,8 @@ div.first_03 {
   width: 490px;
   margin-top: 0px;
   margin-left: 0px;
-  padding: 5px;
-  height: 440px;
+  padding: 0px 5px 0px 5px;
+  height: 450px;
   border-bottom: medium solid #ccc;
 }
 

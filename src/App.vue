@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="height130">
-      <div class="frame">
+      <div class="frame" id="f1">
         <span class="span-main-logo">
           <img class="main-logo" src="./assets/cvlab-white.png" />
         </span>
@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="content">
-      <div class="frame">
+      <div class="frame" id="f2">
         <div class="bannerAndNews">
           <span class="banner" style="display: inline-block">
             <el-carousel
@@ -38,13 +38,13 @@
             <news2 />
           </span>
           <span style="display: inline-block" class="width544">
-            <news1 />
+            <news3 />
           </span>
         </div>
       </div>
     </div>
     <div class="container-fluid" id="footer">
-      <div class="frame">
+      <div class="frame" id="f3">
         <div class="container">
           <div class="row" id="coope" style="text-align: center">
             <div
@@ -158,6 +158,7 @@
 import navMenu from "./navMenu.vue";
 import news1 from "./views/news1.vue";
 import news2 from "./views/news2.vue";
+import news3 from "./views/news3.vue";
 
 export default {
   name: "app",
@@ -178,6 +179,7 @@ export default {
     navMenu,
     news1,
     news2,
+    news3,
   },
   methods: {
     handleSelect(key, keyPath) {
@@ -196,6 +198,11 @@ export default {
   color: #2c3e50;
 }
 
+body{
+  margin:0px;
+  background-color: #e0e0e0;
+}
+
 /* div{
   position:absolute;
 } */
@@ -209,6 +216,20 @@ export default {
 
 img.bannerImg {
   height: 450px;
+}
+
+#f1 {
+  height: 130px;
+  background-color: #005bac;
+}
+
+#f2 {
+  background-color: #c5ddf9;
+}
+
+#f3 {
+  background-color: #e0e0e0;
+  height: 100%;
 }
 
 div.bannerAndNews {
@@ -233,6 +254,11 @@ div.container-fluid {
   height: 470px;
   background-color: #e0e0e0;
 }
+
+div.container {
+  background-color: #e0e0e0;
+}
+
 .el-carousel__item:nth-child(2n) {
   background-color: #99a9bf;
 }
@@ -255,6 +281,7 @@ div.frame {
   padding-bottom: 20px;
   width: 1344px;
   padding-left: 15%;
+  height: auto;
 }
 
 div.blank20 {
@@ -264,13 +291,14 @@ div.blank20 {
 
 span.span-right-align {
   float: right;
-  margin-top: 5px;
+  margin-top: 15px;
   margin-right: 10px;
   height: 130px;
   width: 1000px;
 }
 
 div.bjtudiv {
+  background-color: #005bac;
   height: 60px;
 }
 
@@ -281,6 +309,7 @@ div.height130 {
 }
 
 div.height70 {
+  background-color: #005bac;
   height: 70px;
 }
 
@@ -298,7 +327,7 @@ img.main-logo {
 span.span-main-logo {
   float: left;
   margin-left: 20px;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 span.banner {

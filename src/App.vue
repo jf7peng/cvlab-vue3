@@ -251,6 +251,7 @@ div.row2news {
 }
 
 div.container-fluid {
+  padding-top: 10px;
   height: 470px;
   background-color: #e0e0e0;
 }

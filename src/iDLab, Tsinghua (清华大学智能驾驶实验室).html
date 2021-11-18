@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://www.idlab-tsinghua.com/thulab/labweb/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="msvalidate.01" content="9DCDFD0FFC486A775C8758385054624D">
+		<meta name="keywords" content="iDLab, idlab, Tsinghua, tsinghua, 清华, 清华大学, 智能驾驶实验室, 汽车工程系">
+		<meta name="description" content="The Intelligent Driving Laboratory is a part of the Department of Automotive Engineering at the Tsinghua University in Beijing, China. The lab focuses on advanced control algorithms and machine learning technology in the field of connected and automated vehicles, driver assistance and behavioral analysis, etc.">
+		<title>iDLab, Tsinghua (清华大学智能驾驶实验室)</title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/bootstrap.min.css">
+		<link rel="stylesheet" href="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/style.css">
+		<link rel="stylesheet" href="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/viewer.css">
+		<!-- jQuery文件. -->
+		<script src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/jquery.min.js.下载"></script>
+		<script src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/common.js.下载"></script>
+		<script type="text/javascript">
+			function adInfo(adUrl)
+			{
+				if(!adUrl || adUrl == "")
+					return false;
+				window.location.href = adUrl;				
+			}
+			function getBanner(){
+				$.ajax({
+					type:"get",
+					url:apiPrefix+'home/bannerLists',
+					async:true,
+					success : function(result){
+						var dataList;
+						var olHtml = "";
+						var bannerImgHtml = "";
+						if(result.errorCode > 0)
+						{
+							dataList = result.data.list;
+							var adUrl = "";
+							for (var i = 0; i < dataList.length; i++) {
+								var isActive = "";
+								if(0 == i)
+								{
+									isActive = "active";
+								}
+								if(dataList[i].url)
+								{
+									adUrl = dataList[i].url;
+								}
+								else{
+									//console.log('url doesnot exist!');
+								}
+								olHtml += '<li data-target="#carousel-example-captions" data-slide-to="'+i+'" class="'+isActive+'"></li>';
+								bannerImgHtml += '<div class="item '+isActive+'" onclick="adInfo(\''+adUrl+'\');">'
+											+ '<img data-src="holder.js/1110x500/auto/#777:#777" alt="1110x500" src="'+dataList[i].picture_url+'"'
+											+ 'data-holder-rendered="true">'
+											+ '<div class="carousel-caption1">'
+											+ '<h3>'+dataList[i].name+'</h3>'
+											+ '<p>'+dataList[i].comment+'</p>'
+											+ '</div>'
+											+ '</div>';
+							}
+							$('#indexOl').html(olHtml);
+							$('#indexBanner').html(bannerImgHtml);
+						}
+					}
+				});
+			}
+			
+			function getHomeContent(){
+				$.ajax({
+					type:"get",
+					url:apiPrefix+'home/homeContent',
+					async:true,
+					success : function(result){
+						var dataList;
+						var welcomeHtml;
+						var contactHtml;
+						if(result.errorCode > 0)
+						{
+							dataList = result.data.list[0];
+							welcomeHtml = dataList.welcome;
+							contactHtml = 'Address:'+dataList.address + '<br/>Secretary:' + dataList.secretary + '<br/>Phone No.:'
+										+ dataList.phone + '<br/>Email:<span class="tone">' + dataList.email + '</span>';
+						}
+						$('#indexWelcome').html(welcomeHtml);	
+						//$('.indexContact').html(contactHtml);
+					}
+				});
+			}
+			
+			function init()
+			{
+				getBanner();
+				getHomeContent();
+			}
+		</script>
+	</head>
+
+	<body data-new-gr-c-s-check-loaded="14.1000.0" data-gr-ext-installed="" cz-shortcut-listen="true" style="position: static;">
+		
+		<!--header -->
+		<div id="undefined-sticky-wrapper" class="sticky-wrapper" style="height: 189px;"><div class="navbar navbar-custom sticky" role="navigation"><div class="container" style="min-width: 970px;"><div class="row"><!-- Navbar-header --><div class="navbar-header col-xs-4"><!-- Responsive menu button --><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></button><!-- LOGO --><a class="logo smooth-link" href="http://www.idlab-tsinghua.com/thulab/labweb/index.html"><img src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/logo.png" alt="logo"></a></div><!-- end navbar-header --><!-- menu --><div class="navbar-collapse collapse col-xs-8 right" id="navbar-menu"><!-- search --><div style="overflow:hidden;margin-bottom: 20px;"><form class="form-inline" style="padding: 15px;"><!-- Tq --><div class="right"><img src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/T_logo.png"></div></form></div><!-- Navbar left --><ul class="nav navbar-nav navbar-right"><li><a href="http://www.idlab-tsinghua.com/thulab/labweb/index.html">Home</a></li><li class="dropdown"><a id="dLabelResearch" class="btn-default dropdown-toggle" data-target="#" href="http://www.idlab-tsinghua.com/thulab/labweb/research.html" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Research<span class="caret"></span></a><ul class="dropdown-menu" id="research2Menu" aria-labelledby="dLabelResearch"><li><a href="http://www.idlab-tsinghua.com/thulab/labweb/research.html?2">1. Reinforcement Learning and AI for Self-Driving</a></li><li><a href="http://www.idlab-tsinghua.com/thulab/labweb/research.html?7">2. Optimal Control and Vehicle Automation</a></li><li><a href="http://www.idlab-tsinghua.com/thulab/labweb/research.html?8">3. Distributed Sensing, Learning and Control</a></li><li><a href="http://www.idlab-tsinghua.com/thulab/labweb/research.html?1">4. Driver Behavior Prediction &amp; State Classification</a></li></ul></li><li class="dropdown"><a id="dLabelPeople" class="btn-default dropdown-toggle" data-target="#" href="http://www.idlab-tsinghua.com/thulab/labweb/peoples.html" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">People</a></li><li><a href="http://www.idlab-tsinghua.com/thulab/labweb/publications.html">Publications</a></li><li class="dropdown"><a id="dLabel" data-target="#" href="http://www.idlab-tsinghua.com/thulab/labweb/news.html" class="btn-default dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">News &amp; Events<span class="caret"></span></a><ul class="dropdown-menu" aria-labelledby="dLabel"><li><a href="http://www.idlab-tsinghua.com/thulab/labweb/news.html?news">News</a></li><li><a href="http://www.idlab-tsinghua.com/thulab/labweb/news.html?events">Events</a></li></ul></li></ul></div><!--/Menu --></div></div><!-- end container --></div></div>
+		<!-- end header -->
+		<!-- carousel -->
+		<div class="container-fluid">
+			<div class="container" style="min-width: 970px;">
+				
+				<div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators" id="indexOl"><li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li><li data-target="#carousel-example-captions" data-slide-to="1" class=""></li></ol>
+					<div class="carousel-inner" id="indexBanner" role="listbox"><div class="item active" onclick="adInfo(&#39;http://www.idlab-tsinghua.com/thulab/labweb/peoples.html&#39;);"><img data-src="holder.js/1110x500/auto/#777:#777" alt="1110x500" src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/thumb_96062d8cf6cb95f8d23f6933fb83c853.png" data-holder-rendered="true"><div class="carousel-caption1"><h3>LasVSim</h3><p>LasVSim is an open software for LArge-Scale autonomous Vehicles SIMulation, which is compatible to C++/Python, CarSim and TensorFlow, etc. Its main purpose is to support off-line training of decision making and motion control algorithms (including both single car and multi-car), and hardware-in-the-loop (HIL) test and performance evaluation of autonomous driving controllers in large-scale interactive traffic environments. </p></div></div><div class="item" onclick="adInfo(&#39;http://www.idlab-tsinghua.com/thulab/labweb/peoples.html&#39;);"><img data-src="holder.js/1110x500/auto/#777:#777" alt="1110x500" src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/thumb_e09a5323854570d5fb590e2e70409e53.png" data-holder-rendered="true"><div class="carousel-caption1"><h3>Driving Simulator</h3><p>The iDLAB's driver simulator has flexible stewart platform and five channel screens, which is very convenient for R&amp;D of advanced driver assistance systems and autonomous vehicles</p></div></div></div>
+					<a class="left carousel-control" href="http://www.idlab-tsinghua.com/thulab/labweb/index.html#carousel-example-captions" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="http://www.idlab-tsinghua.com/thulab/labweb/index.html#carousel-example-captions" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- end carousel -->
+		<!-- welcome -->
+		<div class="container" style="font-size: 16px;color: #6f6f6f;margin-bottom: 30px;" id="indexWelcome"><h1 class="tone" style="margin: 25px 0px 10px; color: rgb(92, 48, 125); line-height: 1.1; font-family: inherit; font-size: 40px; box-sizing: border-box;">Welcome to Intelligent Driving Laboratory!</h1><p style="text-align: justify; font-family: Simsun; font-size: medium; margin-top: 20px; white-space: normal;"><span style="font-family: arial, helvetica, sans-serif;"></span><span style="color: rgb(0, 0, 0); font-family: times new roman; font-size: 24px;">The Intelligent Driving Laboratory (<em><strong>i</strong></em>DLAB) is a part of the School of Vehicle and Mobility (SVM) at Tsinghua University.&nbsp;This lab focuses on <span style="font-family: times new roman; font-size: 24px; text-decoration: underline;">advanced automatic control and machine learning algorithms,</span></span><span style="color: rgb(0, 0, 0); font-family: &quot;times new roman&quot;; font-size: 24px; text-decoration: none;">&nbsp;</span><span style="color: rgb(0, 0, 0); font-family: &quot;times new roman&quot;; font-size: 24px; text-decoration: none;">and their applications&nbsp;</span><span style="color: rgb(0, 0, 0); font-family: times new roman; font-size: 24px;">on&nbsp;</span><span style="color: rgb(0, 0, 0); font-family: &quot;times new roman&quot;; font-size: 24px; text-decoration: underline;">autonomous driving,&nbsp;</span><span style="color: rgb(0, 0, 0); font-family: times new roman; font-size: 24px;"><span style="font-family: times new roman; font-size: 24px; text-decoration: underline;">connected vehicles,</span>&nbsp;<span style="font-family: times new roman; font-size: 24px; text-decoration: underline;">driver assistance and driver behavior analysis</span>, etc.&nbsp;</span></p><p style="text-align: justify; margin-top: 20px;"><span style="color: rgb(0, 0, 0);"><span style="color: rgb(0, 0, 0); font-family: &quot;times new roman&quot;; font-size: 24px;">Our research interests are loosely divided into four categories:&nbsp;</span><span style="color: rgb(0, 0, 0); font-family: &quot;times new roman&quot;; font-size: 24px; text-decoration-line: underline;">(1) Perception, decision and control for autonomous vehicles and driver assistance systems;&nbsp;(2) Reinforcement learning and optimal control;&nbsp;(3) Distributed estimation, learning and control; and (4) Large-scale optimization and control of eco-automation and electrified powertrain.&nbsp;</span><span style="color: rgb(0, 0, 0); font-family: &quot;times new roman&quot;; font-size: 24px;">We have achieved a series of important research results and peer-reviewed publications publicly available through this website.&nbsp;</span></span></p><p style="text-align: justify; margin-top: 20px;"><span style="font-family: &quot;times new roman&quot;; font-size: 24px; color: rgb(0, 0, 0);">Undergraduates, master students,&nbsp;Ph.D. students&nbsp;and postdoctoral&nbsp;researchers from a variety of disciplines, including automotive/mechanical engineering, electrical engineering, computer science and automation, etc., are welcome to join our lab!&nbsp;&nbsp;Interested candidates can send your&nbsp;resume and personal statement to {<span style="font-size: 24px; color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;;"><span style="font-family: &quot;times new roman&quot;; font-size: 24px; text-align: justify;">lishuqin1541[AT]tsinghua.edu.cn</span>}</span>.</span><span style="color: rgb(0, 0, 0); font-family: times new roman; font-size: 24px;"> </span></p><p style="text-align: justify; margin-top: 20px;"><span style="font-family: &quot;times new roman&quot;; font-size: 24px; color: rgb(0, 0, 0);"><br></span></p><p style="text-align: justify; margin-top: 20px;"><span style="font-family: &quot;times new roman&quot;; font-size: 24px; color: rgb(0, 0, 0);">欢迎热衷于自动驾驶科研工作的博士后（每年2~3名）、研究生（每年4~5名博士生，3~4名硕士生）和本科生及SRT学生（每年4~5名）进入智能驾驶课题组（iDLAB）工作和学习！如有意向，请发送简历及个人情况介绍至电子邮件：lishuqin1541[AT]tsinghua.edu.cn。</span></p><p style="text-align: justify; margin-top: 20px;"><br></p><p style="text-align: justify; margin-top: 20px;"><span style="color: rgb(0, 0, 0); font-family: times new roman; font-size: 24px;"><span style="font-family: Times New Roman;"></span></span></p><p style=";margin-bottom:0;text-align:center;text-indent:16px;line-height:27px;background:white"><br></p><p style="text-align: justify; margin-top: 20px;"><br></p></div>
+		<!-- end welcome -->
+		<!-- start footer -->
+		<div class="container-fluid" id="footer"><div class="container"><div class="row" id="coope" style="text-align:center;"><div class="footer-coope" style="display: inline-block;margin-right:10px;"><a target="_blank" style="display:inline-block;margin:8px 0;" href="http://www.svm.tsinghua.edu.cn/"><img src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/thumb_d512d57bdd206503917ccfb310a20b25.png" alt="http://www.svm.tsinghua.edu.cn"></a></div><div class="footer-coope" style="display: inline-block;margin-right:10px;"><a target="_blank" style="display:inline-block;margin:8px 0;" href="http://huei.engin.umich.edu/"><img src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/thumb_22170ca135bc37842bb85018f651d2c3.png" alt="http://huei.engin.umich.edu/"></a></div><div class="footer-coope" style="display: inline-block;margin-right:10px;"><a target="_blank" style="display:inline-block;margin:8px 0;" href="http://ddl.stanford.edu/"><img src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/thumb_6823759b1325a8a73e967264dbf77a2f.png" alt="http://ddl.stanford.edu/"></a></div><div class="footer-coope" style="display: inline-block;margin-right:10px;"><a target="_blank" style="display:inline-block;margin:8px 0;" href="https://sites.google.com/site/mpclaboratory/home"><img src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/thumb_fae5a1c5b21448e464a626f2f4dc929e.jpg" alt="https://sites.google.com/site/mpclaboratory/home"></a></div><div class="footer-coope" style="display: inline-block;margin-right:10px;"><a target="_blank" style="display:inline-block;margin:8px 0;" href="https://www.csail.mit.edu/"><img src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/thumb_dc6a3382accac9a93ddf22c46102a181.png" alt="https://www.csail.mit.edu/"></a></div></div><div class="row"><div class="col-md-8 col-md-offset-2"><div class="row" style="margin:0;text-align:center;"><address class="indexContact">A639 LSK Building, School of Vehicle and Mobility, Tsinghua University, Beijing, 100084, China<br></address></div><div class="row" style="margin:0;text-align:center;">Copyright©2016<span class="tone"><a href="http://www.tsinghua.edu.cn/publish/newthu/index.html" target="_blank"> Tsinghua University</a></span><span><a href="http://www.beian.miit.gov.cn/" target="_blank"> 京ICP备17006999号&nbsp;</a></span></div><div class="row recordcode" style="margin-top:15px;text-align:center;"><a style="display: inline-flex;" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802022904" target="_blank"><i></i>京公网安备11010802022904号</a></div></div></div></div></div>
+		<script src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/bootstrap.min.js.下载"></script>
+		<!--[if lte IE 9]>
+		<script src="js/respond.min.js"></script>
+		<script src="js/html5.js"></script>
+		<![endif]-->
+		<script src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/bootstrap-hover-dropdown.js.下载"></script>
+		<script type="text/javascript" src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/viewer.js.下载"></script>
+		<script type="text/javascript" src="./iDLab, Tsinghua (清华大学智能驾驶实验室)_files/menus.js.下载"></script>
+		<!-- end footer -->
+		<script type="text/javascript">
+			$(function(){
+				init();
+			});
+		</script>
+		
+	
+
+
+<div style="position: static; display: none; width: 0px; height: 0px; border: none; padding: 0px; margin: 0px;"><div id="trans-tooltip"><div id="tip-left-top" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-left-top.png&quot;);"></div><div id="tip-top" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-top.png&quot;) repeat-x;"></div><div id="tip-right-top" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-right-top.png&quot;);"></div><div id="tip-right" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-right.png&quot;) repeat-y;"></div><div id="tip-right-bottom" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-right-bottom.png&quot;);"></div><div id="tip-bottom" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-bottom.png&quot;) repeat-x;"></div><div id="tip-left-bottom" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-left-bottom.png&quot;);"></div><div id="tip-left" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-left.png&quot;);"></div><div id="trans-content"></div></div><div id="tip-arrow-bottom" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-arrow-bottom.png&quot;);"></div><div id="tip-arrow-top" style="background: url(&quot;chrome-extension://edhchknefojhifoiebpcbkhcjlkkklci/imgs/map/tip-arrow-top.png&quot;);"></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

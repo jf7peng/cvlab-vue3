@@ -1,36 +1,163 @@
 <template>
-  <div class="frame">
+  <div>
     <div class="height130">
-      <span class="span-main-logo">
-        <img class="main-logo" src="./assets/cvlab-white.png" />
-      </span>
-      <span class="span-right-align">
-        <div class="bjtudiv">
-          <img class="right-align" src="./assets/logo1-white.png" />
-        </div>
-        <div class="height70">
-          <navMenu />
-        </div>
-      </span>
+      <div class="frame">
+        <span class="span-main-logo">
+          <img class="main-logo" src="./assets/cvlab-white.png" />
+        </span>
+        <span class="span-right-align">
+          <div class="bjtudiv">
+            <img class="right-align" src="./assets/logo1-white.png" />
+          </div>
+          <div class="height70">
+            <navMenu />
+          </div>
+        </span>
+      </div>
     </div>
-    <div class="blank20"></div>
-    <div>
-      <span class="banner">
-        <el-carousel height="480px" indicator-position="inside" class="center">
-          <el-carousel-item v-for="item in images" :key="item.id">
-            <img class="bannerImg" :src="item.url" alt="无图片" />
-          </el-carousel-item>
-        </el-carousel>
-      </span>
-      <span> "你好" </span>
+    <div class="content">
+      <div class="frame">
+        <div class="bannerAndNews">
+          <span class="banner" style="display: inline-block">
+            <el-carousel
+              height="450px"
+              indicator-position="inside"
+              class="center"
+            >
+              <el-carousel-item v-for="item in images" :key="item.id">
+                <img class="bannerImg" :src="item.url" alt="无图片" />
+              </el-carousel-item>
+            </el-carousel>
+          </span>
+          <span style="display: inline-block" class="width544">
+            <news1 />
+          </span>
+        </div>
+        <div class="row2news">
+          <span class="banner">
+            <news2 />
+          </span>
+          <span style="display: inline-block" class="width544">
+            <news1 />
+          </span>
+        </div>
+      </div>
     </div>
-
-    <navMenu />
+    <div class="container-fluid" id="footer">
+      <div class="frame">
+        <div class="container">
+          <div class="row" id="coope" style="text-align: center">
+            <div
+              class="footer-coope"
+              style="display: inline-block; margin-right: 10px"
+            >
+              <a
+                target="_blank"
+                style="display: inline-block; margin: 8px 0"
+                href="http://www.svm.tsinghua.edu.cn/"
+                ><img
+                  src="./assets/logo1.png"
+                  alt="http://www.svm.tsinghua.edu.cn"
+              /></a>
+            </div>
+            <div
+              class="footer-coope"
+              style="display: inline-block; margin-right: 10px"
+            >
+              <a
+                target="_blank"
+                style="display: inline-block; margin: 8px 0"
+                href="http://huei.engin.umich.edu/"
+                ><img
+                  src="./assets/logo1.png"
+                  alt="http://www.svm.tsinghua.edu.cn"
+              /></a>
+            </div>
+            <div
+              class="footer-coope"
+              style="display: inline-block; margin-right: 10px"
+            >
+              <a
+                target="_blank"
+                style="display: inline-block; margin: 8px 0"
+                href="http://ddl.stanford.edu/"
+                ><img
+                  src="./assets/logo1.png"
+                  alt="http://www.svm.tsinghua.edu.cn"
+              /></a>
+            </div>
+            <div
+              class="footer-coope"
+              style="display: inline-block; margin-right: 10px"
+            >
+              <a
+                target="_blank"
+                style="display: inline-block; margin: 8px 0"
+                href="https://sites.google.com/site/mpclaboratory/home"
+                ><img
+                  src="./assets/logo1.png"
+                  alt="http://www.svm.tsinghua.edu.cn"
+              /></a>
+            </div>
+            <div
+              class="footer-coope"
+              style="display: inline-block; margin-right: 10px"
+            >
+              <a
+                target="_blank"
+                style="display: inline-block; margin: 8px 0"
+                href="https://www.csail.mit.edu/"
+                ><img
+                  src="./assets/logo1.png"
+                  alt="http://www.svm.tsinghua.edu.cn"
+              /></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="row" style="margin: 0; text-align: center">
+                <address class="indexContact">
+                  A639 LSK Building, School of Vehicle and Mobility, Tsinghua
+                  University, Beijing, 100084, China<br />
+                </address>
+              </div>
+              <div class="row" style="margin: 0; text-align: center">
+                Copyright©2016<span class="tone"
+                  ><a
+                    href="http://www.tsinghua.edu.cn/publish/newthu/index.html"
+                    target="_blank"
+                  >
+                    Tsinghua University</a
+                  ></span
+                ><span
+                  ><a href="http://www.beian.miit.gov.cn/" target="_blank">
+                    京ICP备17006999号&nbsp;</a
+                  ></span
+                >
+              </div>
+              <div
+                class="row recordcode"
+                style="margin-top: 15px; text-align: center"
+              >
+                <a
+                  style="display: inline-flex"
+                  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802022904"
+                  target="_blank"
+                  ><i></i>京公网安备11010802022904号</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import navMenu from "./navMenu.vue";
+import news1 from "./views/news1.vue";
+import news2 from "./views/news2.vue";
 
 export default {
   name: "app",
@@ -49,6 +176,8 @@ export default {
   },
   components: {
     navMenu,
+    news1,
+    news2,
   },
   methods: {
     handleSelect(key, keyPath) {
@@ -65,9 +194,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
+/* div{
+  position:absolute;
+} */
 .el-carousel__item h3 {
   color: #475669;
   font-size: 14px;
@@ -77,7 +208,18 @@ export default {
 }
 
 img.bannerImg {
-  height: 480px;
+  height: 450px;
+}
+
+div.bannerAndNews {
+  height: 470px;
+  background-color: #c5ddf9;
+}
+
+div.row2news {
+  height: 500px;
+  padding-top: 10px;
+  background-color: #c5ddf9;
 }
 
 .el-carousel__item img {
@@ -87,6 +229,10 @@ img.bannerImg {
   transform: translate(-50%, -50%);
 }
 
+div.container-fluid {
+  height: 470px;
+  background-color: #e0e0e0;
+}
 .el-carousel__item:nth-child(2n) {
   background-color: #99a9bf;
 }
@@ -99,11 +245,16 @@ img.bannerImg {
   height: 500px;
 }
 
+div.news1 {
+  height: 450px;
+}
+
 div.frame {
-  background-color: rgb(252, 253, 253);
-  padding-right: calc(50% - 672px);
+  /* background-color: rgb(252, 253, 253); */
+  padding-right: auto;
   padding-bottom: 20px;
-  padding-left: calc(50% - 672px);
+  width: 1344px;
+  padding-left: 15%;
 }
 
 div.blank20 {
@@ -124,7 +275,8 @@ div.bjtudiv {
 }
 
 div.height130 {
-  height: 130px;
+  padding-bottom: 20;
+  height: 150px;
   background-color: #005bac;
 }
 
@@ -150,8 +302,21 @@ span.span-main-logo {
 }
 
 span.banner {
-  height: 480px;
-  width: 270px;
+  padding: 10px;
+  float: left;
+  height: 450px;
+  width: 800px;
+}
+
+div.content {
+  background-color: #c5ddf9;
+}
+
+span.width544 {
+  padding: 10px;
+  float: right;
+  width: 500px;
+  height: 450px;
 }
 
 h1,

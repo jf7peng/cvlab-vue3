@@ -1,0 +1,215 @@
+/* html,
+body, */
+
+/* a, p, h1, h2, h3, h4, h5, h6, body, span, label, div {
+	padding: 0;
+	margin: 0;
+	font-family: '瀵邦喛钂嬮梿鍛寸拨';
+}
+
+div {
+	font-family: '瀵邦喛钂嬮梿鍛寸拨';
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none !important;
+} */
+
+
+.ksh {
+	height: 100%;
+	padding: 0px 10px;
+	/* background: url(../pageBg.png) no-repeat #061537; */
+	background-size: cover;
+	overflow: auto;
+	position: relative;
+	z-index: -2;
+}
+
+/* .visual_con .visual_conBot {
+	height: calc(100% - 136px);
+	background: url(../ksh41.png) no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+} */
+
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2em;
+    background-color: #f1f1f1;
+    
+  } */
+  
+  a {
+    color: #343440;
+    text-decoration: none;
+  }
+  /* 加载旋转动画 */
+
+#load {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: url(../data08.png) no-repeat #061537;
+	background-size: cover;
+	top: 0;
+	left: 0;
+	z-index: 999
+}
+
+#load .load_img {
+	position: absolute;
+	left: calc(50% - 182px);
+	top: calc(50% - 182px);
+}
+
+.load_img img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.load_img .jzxz1 {
+	animation: xz1 8s infinite linear;
+}
+
+@keyframes xz1 {
+	from {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.load_img .jzxz2 {
+	animation: xz2 7s infinite linear;
+}
+
+@keyframes xz2 {
+	from {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-180deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+/* .head_top{position:relative;} */
+
+.head_top {
+	margin-top: 10px;
+	margin-left: 15px;
+	width: 100%;
+}
+
+.head_top img {
+	width:87%;
+}
+
+/* .head_top p{width:100%;text-align:center;color:#ffffff;position:absolute;bottom: -18px;left: -10px;}
+.head_top p span{font-family:'yjsz';font-size:20px;}
+ */
+
+#datatime {
+	position: absolute;
+    right: 70px;
+    top: 54px;
+    z-index: 99;
+	color: white;
+    font-size: 25px;
+	
+}
+
+/* .container {
+	padding-top: 30px;
+	height: 120px;
+	text-align: center;
+} */
+
+/* 设置导航条 横向排列*/
+/* .el-menu{
+	height: 110px;
+} */
+/* .nav-el-menu{
+	
+	height: 120px;
+	font-size: 40px;
+	position:inline-block;
+	background-color: #04050C;
+	
+}
+
+.el-dropdown {
+	
+    vertical-align: top;
+	height: 200px;
+	font-size: 24px;
+	margin-left: 900px;
+	margin-top: 10px;
+  }
+  .el-dropdown + .el-dropdown {
+    margin-left: 100px;
+  }
+  .el-icon-arrow-down {
+    font-size: 12px;
+  }
+
+.nav li {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	list-style: none;
+	padding-left: 4px;
+	
+}
+.nav a {
+	font-size: 30px;
+	font-weight: bold;
+	padding: 0 87px;
+	display: block;
+    color: rgb(161, 182, 201);
+}
+
+.nav .dropbox:hover>a {
+	color: rgba(40, 13, 136, 0.5);
+	background-color: rgba(245, 248, 250, 0.5)
+}
+
+.nav .dropbox {
+	position: relative;
+	display: block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	z-index: 3;
+	background-color: rgba(245, 245, 245, 0.7);
+	width: 98.5%;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 0px 5px;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+}
+
+.dropbox:hover .dropdown-content {
+	display: block;
+} */
+

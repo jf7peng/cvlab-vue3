@@ -95,11 +95,11 @@
 div.first_01 {
   background-color: #ffffff9c;
   float: right;
-  width: 490px;
   margin-top: 0px;
   margin-left: 0px;
-  padding: 0px 5px 0px 5px;
-  height: 450px;
+  padding: 0px 5px 0px 0px;
+  /* height: 450px; */
+  width: 100%;
   border-bottom: medium solid #ccc;
 }
 
@@ -140,7 +140,8 @@ div.first_01 h2 .more {
 
 div.first_01 .news-hot {
   float: left;
-  width: 480px;
+  width:100%;
+  
   margin-left: 0px;
   height: auto;
 }
@@ -176,7 +177,7 @@ div.tuij_news ul {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 40px;
+  padding-inline-start: 0px;
 }
 
 div.clear {
@@ -189,4 +190,10 @@ div.tuij_news ul li {
   list-style: none;
   text-align: left;
 }
+
+li {
+  display: inline-block;
+  margin: 0 0px;
+}
+
 </style>

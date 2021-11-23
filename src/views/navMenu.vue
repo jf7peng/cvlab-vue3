@@ -31,7 +31,7 @@
 div.nav-bar-right{
   float: right;
   height: 70px;
-  width: 390px;
+  width: 430px;
 }
 </style>
 

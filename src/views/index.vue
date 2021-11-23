@@ -3,19 +3,28 @@
     <div class="height130">
       <div class="frame" id="f1">
         <span class="span-main-logo">
-          <router-link to="./index"> 
-          <img class="main-logo" style="display: inline-block" src="./../assets/cvlab-white.png" />
+          <router-link to="./">
+            <img
+              class="main-logo"
+              style="display: inline-block"
+              src="./../assets/cvlab-white.png"
+            />
           </router-link>
           <!-- <a href="localhost:8080/">
           <img class="main-logo" style="display: inline-block" src="./../assets/cvlab-white.png" />
           </a> -->
-          
         </span>
         <span class="span-right-align">
           <div class="bjtudiv">
-            <img class="right-align" style="display: inline-block" src="./../assets/logo1-white.png" />
+            <a href="http://bjtu.edu.cn">
+              <img
+                class="right-align"
+                style="display: inline-block"
+                src="./../assets/logo1-white.png"
+              />
+            </a>
           </div>
-          <div class="height70"> 
+          <div class="height70">
             <navMenu />
           </div>
         </span>
@@ -161,10 +170,10 @@
 </template>
 
 <script>
-import navMenu from "./../views/navMenu.vue";
-import news1 from "./../views/news1.vue";
-import news2 from "./../views/news2.vue";
-import news3 from "./../views/news3.vue";
+import navMenu from "./navMenu.vue";
+import news1 from "./news1.vue";
+import news2 from "./news2.vue";
+import news3 from "./news3.vue";
 
 export default {
   name: "app2",
@@ -204,8 +213,8 @@ export default {
   color: #2c3e50;
 } */
 
-body{
-  margin:0px;
+body {
+  margin: 0px;
   background-color: #e0e0e0;
 }
 

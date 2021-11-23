@@ -2,12 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import view_flask from '../views/view_flask.vue'
 import test_bootstrap from '../views/test_bootstrap.vue'
 import cv_origin from '../views/cv_origin.vue'
-import index from '../views/index.vue'
+// import index_el from '../views/index_el.vue'
+import index_el from '../views/index_el.vue'
 const routes = [
   {
     path: '/',
-    name: 'index',
-    component: index
+    name: 'index_el',
+    component: index_el
   },
   {
     path: '/view_flask',

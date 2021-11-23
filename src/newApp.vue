@@ -9,12 +9,12 @@
 
 
 <script>
-import index from './views/index.vue'
+import index_el from './views/index_el.vue'
 
 export default {
   name: 'newapp',
   components: {
-    index,
+    index_el,
   }
 }
 </script>

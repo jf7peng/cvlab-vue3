@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-bar-right">
+  <div class="nav-bar-center">
     <el-menu
       :default-active="activeIndex2"
       class="el-menu-demo"
@@ -29,9 +29,9 @@
 <style>
 
 div.nav-bar-right{
-  float: right;
+  float: center;
   height: 70px;
-  width: 430px;
+  width: 500px;
 }
 </style>
 

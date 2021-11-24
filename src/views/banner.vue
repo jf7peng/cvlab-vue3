@@ -10,6 +10,7 @@
 
 <style>
 .bannerC {
+  margin-top:10px;
   height: 100%;
   width: 100%;
 }

@@ -7,7 +7,7 @@
         :sm="{ span: 3, offset: 0 }"
         :md="{ span: 3, offset: 0 }"
         :lg="{ span: 4, offset: 0 }"
-        :xl="{ span: 6, offset: 0 }"
+        :xl="{ span: 4, offset: 0 }"
       >
         <span> </span>
       </el-col>
@@ -16,7 +16,7 @@
         :sm="{ span: 18, offset: 0 }"
         :md="{ span: 18, offset: 0 }"
         :lg="{ span: 16, offset: 0 }"
-        :xl="{ span: 12, offset: 0 }"
+        :xl="{ span: 16, offset: 0 }"
         class="height130"
       >
         <el-row :gutter="10">
@@ -55,9 +55,6 @@
                   />
                 </a>
               </div>
-              <div class="height70">
-                <navMenu />
-              </div>
             </span>
           </el-col>
         </el-row>
@@ -68,7 +65,39 @@
         :sm="{ span: 3, offset: 0 }"
         :md="{ span: 3, offset: 0 }"
         :lg="{ span: 4, offset: 0 }"
-        :xl="{ span: 6, offset: 0 }"
+        :xl="{ span: 4, offset: 0 }"
+      >
+      </el-col>
+    </el-row>
+    <el-row :gutter="0">
+      <el-col
+        class="grid-content header2"
+        :xs="{ span: 0, offset: 0 }"
+        :sm="{ span: 3, offset: 0 }"
+        :md="{ span: 3, offset: 0 }"
+        :lg="{ span: 4, offset: 0 }"
+        :xl="{ span: 4, offset: 0 }"
+      >
+        <span> </span>
+      </el-col>
+      <el-col
+        :xs="{ span: 24, offset: 0 }"
+        :sm="{ span: 18, offset: 0 }"
+        :md="{ span: 18, offset: 0 }"
+        :lg="{ span: 16, offset: 0 }"
+        :xl="{ span: 16, offset: 0 }"
+      >
+        <div type="flex" justify="center" class="height70">
+          <navMenu />
+        </div>
+      </el-col>
+      <el-col
+        class="grid-content header2"
+        :xs="{ span: 0, offset: 0 }"
+        :sm="{ span: 3, offset: 0 }"
+        :md="{ span: 3, offset: 0 }"
+        :lg="{ span: 4, offset: 0 }"
+        :xl="{ span: 4, offset: 0 }"
       >
       </el-col>
     </el-row>
@@ -79,7 +108,7 @@
         :sm="{ span: 3, offset: 0 }"
         :md="{ span: 3, offset: 0 }"
         :lg="{ span: 4, offset: 0 }"
-        :xl="{ span: 6, offset: 0 }"
+        :xl="{ span: 4, offset: 0 }"
       >
         <span></span>
       </el-col>
@@ -88,7 +117,7 @@
         :sm="{ span: 18, offset: 0 }"
         :md="{ span: 18, offset: 0 }"
         :lg="{ span: 16, offset: 0 }"
-        :xl="{ span: 12, offset: 0 }"
+        :xl="{ span: 16, offset: 0 }"
         class="grid-content main-content"
       >
         <el-row :gutter="10">
@@ -118,7 +147,58 @@
         :sm="{ span: 3, offset: 0 }"
         :md="{ span: 3, offset: 0 }"
         :lg="{ span: 4, offset: 0 }"
-        :xl="{ span: 6, offset: 0 }"
+        :xl="{ span: 4, offset: 0 }"
+      >
+        <span> </span>
+      </el-col>
+    </el-row>
+    <el-row :gutter="0" id="bg0">
+      <el-col
+        class="grid-content main-content"
+        :xs="{ span: 0, offset: 0 }"
+        :sm="{ span: 3, offset: 0 }"
+        :md="{ span: 3, offset: 0 }"
+        :lg="{ span: 4, offset: 0 }"
+        :xl="{ span: 4, offset: 0 }"
+      >
+        <span></span>
+      </el-col>
+      <el-col
+        :xs="{ span: 24, offset: 0 }"
+        :sm="{ span: 18, offset: 0 }"
+        :md="{ span: 18, offset: 0 }"
+        :lg="{ span: 16, offset: 0 }"
+        :xl="{ span: 16, offset: 0 }"
+        class="grid-content main-content"
+      >
+        <el-row :gutter="10">
+          <el-col
+            :xs="{ span: 24, offset: 0 }"
+            :sm="{ span: 24, offset: 0 }"
+            :md="{ span: 24, offset: 0 }"
+            :lg="{ span: 14, offset: 0 }"
+            :xl="{ span: 14, offset: 0 }"
+          >
+            <news2 />
+          </el-col>
+          <el-col
+            :xs="{ span: 24, offset: 0 }"
+            :sm="{ span: 24, offset: 0 }"
+            :md="{ span: 24, offset: 0 }"
+            :lg="{ span: 10, offset: 0 }"
+            :xl="{ span: 10, offset: 0 }"
+          >
+            <news3 />
+          </el-col>
+        </el-row>
+      </el-col>
+      <el-col
+        class="grid-content main-content"
+        :xs="{ span: 0, offset: 0 }"
+        :sm="{ span: 3, offset: 0 }"
+        :md="{ span: 3, offset: 0 }"
+        :lg="{ span: 4, offset: 0 }"
+        :xl="{ span: 4, offset: 0 }"
       >
         <span> </span>
       </el-col>
@@ -130,7 +210,7 @@
         :sm="{ span: 3, offset: 0 }"
         :md="{ span: 3, offset: 0 }"
         :lg="{ span: 4, offset: 0 }"
-        :xl="{ span: 6, offset: 0 }"
+        :xl="{ span: 4, offset: 0 }"
       >
         <span> </span>
       </el-col>
@@ -139,7 +219,7 @@
         :sm="{ span: 18, offset: 0 }"
         :md="{ span: 18, offset: 0 }"
         :lg="{ span: 16, offset: 0 }"
-        :xl="{ span: 12, offset: 0 }"
+        :xl="{ span: 16, offset: 0 }"
         class="grid-content footer"
       >
       </el-col>
@@ -149,7 +229,7 @@
         :sm="{ span: 3, offset: 0 }"
         :md="{ span: 3, offset: 0 }"
         :lg="{ span: 4, offset: 0 }"
-        :xl="{ span: 6, offset: 0 }"
+        :xl="{ span: 4, offset: 0 }"
       >
         <span> </span>
       </el-col>
@@ -238,6 +318,11 @@ div.row2news {
   background-color: #005bac;
 }
 
+.el-col.header2 {
+  height: 70px;
+  background-color: #005bac;
+}
+
 .el-col.main-content {
   padding: 10px;
   background-color: #c5ddf9;
@@ -282,7 +367,7 @@ span.span-right-align {
 
 div.bjtudiv {
   background-color: #005bac;
-  height: 60px;
+  height: 130px;
 }
 
 div.height130 {
@@ -297,7 +382,7 @@ div.height70 {
 }
 
 img.right-align {
-  height: 60px;
+  height: 80px;
   float: right;
 }
 
@@ -313,7 +398,9 @@ span.span-main-logo {
   margin-top: 15px;
 }
 
-
+#bg0 {
+  background-color: None;
+}
 
 div.content {
   background-color: #c5ddf9;

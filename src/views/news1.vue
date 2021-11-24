@@ -94,10 +94,10 @@
 <style >
 div.first_01 {
   background-color: #ffffff9c;
-  float: right;
-  margin-top: 0px;
+  float: left;
+  margin-top: 10px;
   margin-left: 0px;
-  padding: 0px 5px 0px 0px;
+  padding: 0px 0px 0px 0px;
   /* height: 450px; */
   width: 100%;
   border-bottom: medium solid #ccc;
@@ -140,8 +140,7 @@ div.first_01 h2 .more {
 
 div.first_01 .news-hot {
   float: left;
-  width:100%;
-  
+  width:98%;
   margin-left: 0px;
   height: auto;
 }

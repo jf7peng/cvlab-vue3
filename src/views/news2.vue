@@ -95,11 +95,9 @@
 div.first_02 {
   background-color: #ffffff9c;
   float: left;
-  width: 800px;
-  margin-top: 0px;
-  margin-left: 0px;
-  padding: 0px 5px 0px 5px;
-  height: 450px;
+  width: 100%;
+  height: 95%;
+  padding: 0px 0px 0px 0px;
   border-bottom: medium solid #ccc;
 }
 
@@ -140,7 +138,7 @@ div.first_02 h2 .more {
 
 div.first_02 .news-hot {
   float: left;
-  width: 790px;
+  width:98%;
   margin-left: 0px;
   height: auto;
 }
